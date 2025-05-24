@@ -1,7 +1,6 @@
 # Simple API Fetcher
 
-A clean and responsive Next.js application that fetches and displays posts from the JSONPlaceholder API 
-   # By FEMI TAOFEEQ
+A clean and responsive Next.js application that fetches and displays posts from the JSONPlaceholder API.
 
 ## Features
 
@@ -12,6 +11,13 @@ A clean and responsive Next.js application that fetches and displays posts from 
 - ❌ **Error Handling**: User-friendly error messages with retry functionality
 - 📱 **Responsive Design**: Works perfectly on desktop and mobile devices
 - 🎯 **Grid Layout**: Posts displayed in a responsive card grid
+- 📄 **Modal Posts**: Click "Read more" to view full post content in a modal
+- 🏠 **Professional Layout**: Complete with header navigation and footer
+- 🎭 **Custom Favicon**: App logo as favicon for brand consistency
+
+## Developer
+
+**GitHub**: [NaijaB0T](https://github.com/NaijaB0T)
 
 ## API
 
@@ -56,15 +62,21 @@ npm start
 Simple_Api_Fetcher/
 ├── src/
 │   ├── app/
-│   │   ├── layout.js          # Root layout component
+│   │   ├── layout.js          # Root layout with header/footer
 │   │   ├── page.js            # Main page component
+│   │   ├── icon.svg           # App favicon (auto-detected by Next.js)
 │   │   └── globals.css        # Global styles
 │   └── components/
+│       ├── Header.js          # Navigation header
+│       ├── Footer.js          # Footer with links and social icons
 │       ├── PostList.js        # Grid container for posts
-│       ├── PostCard.js        # Individual post card
+│       ├── PostCard.js        # Individual post card with modal trigger
+│       ├── PostModal.js       # Modal for full post content
 │       ├── SearchBar.js       # Search input component
 │       ├── LoadingSpinner.js  # Loading animation
 │       └── ErrorMessage.js    # Error display component
+├── public/
+│   └── favicon.svg           # Backup favicon
 ├── package.json
 ├── next.config.js
 ├── tailwind.config.js
@@ -79,6 +91,19 @@ Simple_Api_Fetcher/
 - **JSONPlaceholder**: Fake REST API for testing and prototyping
 
 ## Features Breakdown
+
+### Modal Post Viewer
+- Click "Read more" on any post card to open detailed view
+- Full post content displayed in a clean modal
+- Keyboard support (ESC to close)
+- Click outside modal to close
+- Prevents background scrolling when open
+
+### Professional Layout
+- Fixed header with navigation and branding
+- Footer with quick links, resources, and social media
+- Responsive navigation for mobile devices
+- Consistent branding throughout the app
 
 ### Search Functionality
 - Real-time filtering of posts
@@ -95,3 +120,8 @@ Simple_Api_Fetcher/
 - Mobile-first approach
 - Responsive grid layout (1 column on mobile, 2 on tablet, 3 on desktop)
 - Optimized for all screen sizes
+
+### Favicon & Branding
+- Custom SVG favicon matching the app logo
+- Consistent blue color scheme (#2563eb)
+- Professional branding elements

@@ -50,11 +50,9 @@ export default function Home() {
 
   return (
     <div className="max-w-6xl mx-auto">
-      <header className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">Simple API Fetcher</h1>
-        <p className="text-lg text-gray-600 mb-6">Fetch and display posts from JSONPlaceholder API</p>
+      <div className="text-center mb-8">
         <SearchBar onSearch={setSearchTerm} searchTerm={searchTerm} />
-      </header>
+      </div>
 
       {loading && <LoadingSpinner />}
       {error && <ErrorMessage message={error} onRetry={fetchPosts} />}
