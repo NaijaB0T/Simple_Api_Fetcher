@@ -49,12 +49,21 @@ This app fetches data from: `https://jsonplaceholder.typicode.com/posts`
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-### Build for Production
+### Build for Production (Static Export)
 
 ```bash
-npm run build
-npm start
+npm run build        # Build to dist folder
+npm run preview      # Preview the built app locally
 ```
+
+### Deploy to Static Hosting
+
+After running `npm run build`, you can deploy the `dist` folder to:
+- GitHub Pages
+- Netlify  
+- Vercel
+- AWS S3
+- Any static hosting service
 
 ## Project Structure
 
